@@ -1,0 +1,123 @@
+/* Header CSS - Estilo USS según imágenes de referencia */
+.header {
+  background: var(--color-bg);
+  padding: 20px 30px;
+  box-shadow: var(--shadow-sm);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-back-button {
+  background: var(--color-bg-alt);
+  border: none;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+  color: var(--color-text-soft);
+}
+
+.header-back-button:hover {
+  background: var(--color-bg-alt-2);
+}
+
+.header-title-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.header-user-info {
+  font-size: 0.9rem;
+  color: var(--color-text-soft);
+  margin: 0;
+}
+
+.header-institution {
+  font-size: 0.85rem;
+  color: var(--color-text-soft);
+  opacity: 0.7;
+  margin: 0;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-greeting {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-bg-alt);
+  padding: 12px 20px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.header-greeting-emoji {
+  font-size: 1.2rem;
+}
+
+.header-greeting-text {
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.header-uss-logo {
+  width: 40px;
+  height: 40px;
+  background: var(--color-bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+}
+
+.header-uss-logo img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    padding: 15px 20px;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  
+  .header-greeting {
+    padding: 8px 15px;
+  }
+  
+  .header-greeting-text {
+    font-size: 1rem;
+  }
+}

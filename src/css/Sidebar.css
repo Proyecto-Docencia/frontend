@@ -1,0 +1,448 @@
+/* Sidebar CSS - Estilo USS según imágenes de referencia */
+.sidebar {
+  width: 280px;
+  /* Azul aclarado con gradiente para dar profundidad y mejor legibilidad del escudo */
+  background: linear-gradient(165deg,#c3c8cc 0%, #003464 55%, #002b5c 80%);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 10;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.sidebar.minimized {
+  width: 80px;
+}
+
+.sidebar-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px 20px;
+  /* Fijamos altura constante del header para que el inicio del menú
+     (y por ende la altura del primer ícono) sea igual en ambos estados.
+     Usamos un valor que coincide con la altura natural expandida. */
+  height: 180px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.sidebar-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: var(--color-bg);
+  cursor: pointer;
+  font-size: 18px;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color var(--transition-fast);
+}
+
+.sidebar-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.sidebar-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centrar verticalmente dentro del header */
+  flex: 1; /* Ocupar el espacio disponible para poder centrar */
+  margin-top: 0;
+  width: 100%;
+}
+
+ .sidebar-logo-icon {
+  /* Sin fondo ni borde: solo el SVG limpio */
+  width: 100%;
+  max-width: 140px; /* límite para que no rompa el header */
+  height: auto;
+  background: none;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.sidebar.minimized .sidebar-logo-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.sidebar-logo-icon img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.sidebar.minimized .sidebar-logo-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.sidebar-logo-text {
+  text-align: center;
+}
+
+.sidebar.minimized .sidebar-logo-text {
+  display: none;
+}
+
+.sidebar-logo-text h1 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+.sidebar.minimized .sidebar-nav {
+  /* Podemos añadir un pequeño offset si fuera necesario con padding-top.
+     La alineación principal la lograremos ampliando la altura del header en modo minimizado. */
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+/* Mantener la misma altura del header para consistencia */
+.sidebar.minimized .sidebar-header {
+  height: 180px; /* Misma altura que el header expandido */
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overflow: hidden;
+}
+
+.sidebar.minimized .sidebar-menu {
+  gap: 2px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: visible; /* Permitir que los tooltips sean visibles */
+}
+
+.sidebar-item {
+  margin: 0;
+  width: 100%;
+}
+
+.sidebar.minimized .sidebar-item {
+  width: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar-item-header {
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  border-radius: 0;
+  height: 54px; /* Altura fija para centrar íconos de forma consistente */
+  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+  border: 1px solid transparent; /* Para poder mostrar contorno dorado al activar */
+  position: relative;
+}
+
+.sidebar.minimized .sidebar-item-header {
+  padding: 15px;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.sidebar.minimized .sidebar-item-header:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.sidebar-item-content {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.sidebar.minimized .sidebar-item-content {
+  justify-content: center;
+}
+
+.sidebar-item-header:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--color-bg);
+}
+
+.sidebar-item-header.active,
+.sidebar-item-header[aria-current="page"],
+.sidebar-item-header.is-active {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  font-weight: 600;
+  border-color: var(--color-accent-hover);
+  box-shadow: 0 0 0 1px var(--color-accent-hover), 0 1px 3px rgba(0,0,0,0.25);
+}
+
+/* Hover sobre un item ya activo: ligeramente más intenso */
+.sidebar-item-header.active:hover,
+.sidebar-item-header[aria-current="page"]:hover,
+.sidebar-item-header.is-active:hover {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+}
+
+/* Efecto al presionar (mousedown) cualquier item: feedback dorado temporal */
+.sidebar-item-header:active:not(.active):not(.is-active) {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent-hover);
+}
+
+/* Accesibilidad: foco por teclado */
+.sidebar-item-header:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring-accent);
+  border-color: var(--color-accent-hover);
+}
+
+.sidebar-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  stroke-width: 2;
+  margin-right: 15px;
+}
+
+.sidebar.minimized .sidebar-icon {
+  /* Mantener el mismo tamaño que en expandido para que no cambie la alineación visual */
+  width: 22px;
+  height: 22px;
+  stroke-width: 2;
+  margin-right: 0;
+  flex-shrink: 0;
+}
+
+.sidebar-item-text {
+  font-size: 0.95rem;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.sidebar.minimized .sidebar-item-text {
+  display: none;
+}
+
+.sidebar-arrow {
+  width: 16px;
+  height: 16px;
+}
+
+.sidebar.minimized .sidebar-arrow {
+  display: none;
+}
+
+.sidebar-arrow.rotated {
+  transform: rotate(180deg);
+}
+
+.sidebar-submenu {
+  max-height: 0;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+}
+
+.sidebar.minimized .sidebar-submenu {
+  display: none;
+}
+
+.sidebar-submenu.open {
+  max-height: 300px;
+}
+
+.sidebar-submenu-item {
+  display: block;
+  padding: 12px 25px 12px 65px;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.sidebar-submenu-item:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  text-decoration: none;
+}
+
+/* Submenu activo con estilo dorado también */
+.sidebar-submenu-item.active,
+.sidebar-submenu-item[aria-current="page"],
+.sidebar-submenu-item.is-active {
+  background: var(--color-accent);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.sidebar-submenu-item:active:not(.active):not(.is-active) {
+  background: var(--color-accent);
+  color: var(--color-primary);
+}
+
+.sidebar-footer {
+  padding: 20px 25px 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.sidebar.minimized .sidebar-footer {
+  padding: 20px 13px 30px;
+  overflow: visible; /* Permitir tooltips */
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar-logout {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  border: none;
+  background: none;
+  color: white;
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  justify-content: flex-start;
+  min-height: 54px;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar.minimized .sidebar-logout {
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.sidebar.minimized .sidebar-logout:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.sidebar-logout:hover {
+  color: var(--color-accent);
+  background: none;
+}
+
+.sidebar-logout .sidebar-icon {
+  margin-right: 15px;
+}
+
+.sidebar.minimized .sidebar-logout .sidebar-icon {
+  margin-right: 0;
+}
+
+.sidebar-logout-text {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.sidebar.minimized .sidebar-logout-text {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  
+  .sidebar.mobile-open {
+    transform: translateX(0);
+  }
+}
+
+/* Scrollbar personalizada */
+.sidebar-nav::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-nav::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Tooltips para sidebar minimizado */
+.sidebar.minimized [data-tooltip]:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 90px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+
+.sidebar.minimized [data-tooltip]:hover::before {
+  content: '';
+  position: absolute;
+  left: 82px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 8px solid transparent;
+  border-right-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  pointer-events: none;
+}
