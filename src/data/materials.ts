@@ -105,6 +105,10 @@ export const materials: Material[] = [
       <p>¿Cuál es la experiencia de aprendizaje que necesito desarrollar en mi asignatura que puede ser mediada positivamente con el uso de la IAGen?</p>
       <p><strong>Descripción:</strong> En esta fase, el académico (como facilitador) debe reflexionar para identificar el estado o las necesidades a desarrollar en sí mismo y en sus estudiantes con relación a cada habilidad. Esta etapa consiste en realizar un diagnóstico para explorar y definir cómo la IAGen puede ser un catalizador o mediador de aprendizaje. A partir de esta autoevaluación, el académico identifica el desafío o acción necesaria y define qué hará. Este ejercicio reflexivo levantará un estado inicial en cada habilidad de los cursos que lidere. El diagnóstico debe permitir que el desafío contemple las fortalezas y debilidades personales y las de sus estudiantes, para abordar integralmente el trabajo a realizar. La integración de tecnología en el proceso de enseñanza debe ser paso a paso y en conjunto con los estudiantes, buscando rediseñar y transformar el proceso.</p>
 
+      <div class="esquema-etapa">
+        <img src="/docs/Esquemas%20PDF/CAP2/esquema_etapa_1_CAP2.png" alt="Esquema Etapa 1" style="max-width:100%;height:auto;margin-top:1rem;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,0.08);" />
+      </div>
+
       <h3>Etapa 2.- Planificar la experiencia de aprendizaje</h3>
       <p><strong>Pregunta clave:</strong></p>
       <p>¿Cómo será el paso a paso de la experiencia de enseñanza y aprendizaje?</p>
@@ -120,6 +124,10 @@ export const materials: Material[] = [
         <li>Identificar, seleccionar o crear los recursos y materiales necesarios.</li>
         <li>Elaborar un instrumento para evaluar la experiencia considerando los indicadores ya elaborados.</li>
       </ul>
+
+      <div class="esquema-etapa">
+        <img src="/docs/Esquemas%20PDF/CAP2/esquema_etapa_2_CAP2.png" alt="Esquema Etapa 2" style="max-width:100%;height:auto;margin-top:1rem;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,0.08);" />
+      </div>
 
       <p><strong>Puntos clave en la planificación:</strong></p>
       <ul>
@@ -140,6 +148,10 @@ export const materials: Material[] = [
       <p>¿Puedo observar y medir los indicadores de evaluación definidos?</p>
       <p><strong>Descripción:</strong> Es el momento donde la experiencia de aprendizaje se lleva a cabo y se implementa según la planificación. El académico podrá apreciar las reacciones, desempeños y reflexiones de sus estudiantes. Es necesario cerrar la actividad para poder evaluar el logro del objetivo y comparar el resultado con el análisis realizado en la primera etapa del ciclo. Esta etapa requiere la preparación y disposición positiva del docente, lo cual es fundamental para motivar y desarrollar un ambiente positivo y favorable para el aprendizaje.</p>
 
+      <div class="esquema-etapa">
+        <img src="/docs/Esquemas%20PDF/CAP2/esquema_etapa_3_CAP2.png" alt="Esquema Etapa 3" style="max-width:100%;height:auto;margin-top:1rem;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,0.08);" />
+      </div>
+
       <h4>Proceso de Ejecución:</h4>
       <ol>
         <li>Implementar Plan: Poner el plan diseñado en acción.</li>
@@ -153,6 +165,10 @@ export const materials: Material[] = [
       <h3>Etapa 4. Reflexión de la Experiencia</h3>
       <p><strong>Pregunta clave:</strong> ¿Qué avances se lograron?</p>
       <p><strong>Descripción:</strong> Después de la ejecución, el profesor debe reflexionar sobre la experiencia vivida. La reflexión contempla el nivel de logro de la actividad, pero va más allá, ya que es el momento para evaluar y comparar el estado inicial identificado en la primera etapa del ciclo. Esto implica hacerse preguntas orientadoras para una reflexión personal y conjunta , y para proyectar el aprendizaje conectándolo con el perfil de egreso y la disciplina de manera transversal.</p>
+
+      <div class="esquema-etapa">
+        <img src="/docs/Esquemas%20PDF/CAP2/esquema_etapa_4_CAP2.png" alt="Esquema Etapa 4" style="max-width:100%;height:auto;margin-top:1rem;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,0.08);" />
+      </div>
 
       <p><strong>Focos de la Reflexión:</strong></p>
       <ul>
@@ -168,6 +184,10 @@ export const materials: Material[] = [
       <p>¿Qué cambios ha generado este proceso en mi práctica docente?</p>
       <p><strong>Descripción:</strong> Tras la reflexión y las conclusiones, se establece un período para monitorear cómo se está instalando el objetivo planteado en el docente y los estudiantes. Asimilar un aprendizaje requiere tiempo, espacio para integrar, monitoreo, apoyos, y mantener el objetivo propuesto en la memoria de los estudiantes o en el hacer de la clase. El docente debe verificar el nivel de asimilación, adquisición o incorporación de lo realizado en la actividad, evaluando el impacto real que tuvo en el aprendizaje de sus estudiantes y el cambio que ha generado en él.</p>
 
+      <div class="esquema-etapa">
+        <img src="/docs/Esquemas%20PDF/CAP2/esquema_etapa_5_CAP2.png" alt="Esquema Etapa 5" style="max-width:100%;height:auto;margin-top:1rem;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,0.08);" />
+      </div>
+
       <h4>Proceso de Asimilación:</h4>
       <ul>
         <li>Aprendizaje Inicial: Nuevas habilidades y conocimientos.</li>
@@ -182,6 +202,10 @@ export const materials: Material[] = [
       <p>¿Cómo fue la experiencia y el impacto en el proceso de enseñanza del docente y aprendizaje en los estudiantes?</p>
       <p>¿Qué nuevas experiencias se pueden iniciar en el corto o largo plazo?</p>
       <p><strong>Descripción:</strong> Esta es la etapa final, donde el profesor evalúa el proceso completo. Se analiza si el ciclo identificado se ha cerrado, si falta algún elemento, o si esta experiencia abre una nueva oportunidad para otro proceso más complejo o el reinicio de una nueva acción. Se sugiere el uso de preguntas orientadoras para guiar esta revisión y ajuste en relación con lo identificado en la primera etapa.</p>
+
+      <div class="esquema-etapa">
+        <img src="/docs/Esquemas%20PDF/CAP2/esquema_etapa_6_CAP2.png" alt="Esquema Etapa 6" style="max-width:100%;height:auto;margin-top:1rem;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,0.08);" />
+      </div>
 
       <h4>Proceso de Evaluación del Ciclo:</h4>
       <ol>
@@ -238,6 +262,10 @@ export const materials: Material[] = [
         <li><strong>Utilizar:</strong> Usar herramientas de IAGen de manera efectiva para fines académicos y profesionales.</li>
         <li><strong>Aplicar:</strong> Aplicar prácticas responsables y seguras en el uso de la IAGen.</li>
       </ul>
+
+      <div class="esquema-etapa">
+        <img src="/docs/Esquemas%20PDF/CAP3/esquema_inicio_del_CAP3.png" alt="Esquema inicial Capítulo 3" style="max-width:100%;height:auto;margin-top:1rem;border-radius:6px;box-shadow:0 2px 6px rgba(0,0,0,0.08);" />
+      </div>
 
       <h3>La Importancia de la Alfabetización en IAGen</h3>
       <p>Es esencial que los estudiantes sean ciudadanos y profesionales alfabetizados digitalmente en IAGen, capaces de comprender, utilizar de forma efectiva y navegar de manera ética en este nuevo ecosistema tecnológico. Este desarrollo es un pilar fundamental para:</p>

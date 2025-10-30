@@ -198,9 +198,17 @@
 }
 
 .pdf-content img:hover {
-  transform: scale(1.02);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-  cursor: zoom-in;
+  /* Remove interactive hover effects for printed/inline esquemas: no zoom, no pointer change */
+  transform: none !important;
+  box-shadow: none !important;
+  cursor: default !important;
+}
+
+/* Ensure esquemas inserted inline don't show interactive pointer or hover styles */
+.esquema-etapa img {
+  transform: none !important;
+  box-shadow: none !important;
+  cursor: default !important;
 }
 
 .pdf-content figcaption {
