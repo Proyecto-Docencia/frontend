@@ -92,7 +92,7 @@ const Welcome: React.FC = () => {
                   <Link to="/planificacion/mis-planificaciones" className="welcome-cta" aria-label="Ir a Planificaciones">Ir a Planificaciones</Link>
                 )}
                 {expanded === 3 && (
-                  <Link to="/centro-ia" className="welcome-cta" aria-label="Ir a Asistente IA">Ir al Asistente IA</Link>
+                  <Link to="/chatbot" className="welcome-cta" aria-label="Ir a Asistente IA">Ir al Asistente IA</Link>
                 )}
               </div>
             </div>
