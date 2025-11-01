@@ -325,6 +325,63 @@ export const materials: Material[] = [
         <li>Entrenar un Chat Bot para la asignatura, en la aplicación POE (<a href="https://poe.com/login">https://poe.com/login</a>) es posible crear un chat con estas características.</li>
         <li>Diseñar material diversificado para la asignatura o carrera utilizando Notebook LM (<a href="https://notebooklm.google/">https://notebooklm.google/</a>)</li>
     </ul>
+    <h2>Un ejemplo de experiencia de aprendizaje elaborada con el ciclo.</h2>
+    <p>Planificación 1. En búsqueda del recurso de IAGen más adecuado para la asignatura o disciplina.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Objetivo</th>
+                <th>Indicadores</th>
+                <th>Recursos de IAGen seleccionados</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Analizar comparativamente el funcionamiento de tres recursos de inteligencia artificial generativa (IAGen) ante un mismo y distintos prompts, aplicados a un desafío propio de su disciplina, mediante el trabajo colaborativo</td>
+                <td>
+                    <ul>
+                        <li>Exploran las características, funciones y limitaciones de al menos tres herramientas de IAGen.</li>
+                        <li>Comparan la calidad y pertinencia de los contenidos generados por cada recurso de IAGen ante un mismo prompt disciplinar.</li>
+                        <li>Argumentan de manera fundamentada cuál de los recursos de IAGen resulta más efectivo según los criterios de la tarea académica propuesta.</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>ChayGpt</li>
+                        <li>Gemini</li>
+                        <li>Perplexity</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>Inicio</th>
+                <th>Desarrollo</th>
+                <th>Cierre</th>
+            </tr>
+            <tr>
+                <td>
+                    <p>Los estudiantes conocen el diagnóstico hecho por el profesor sobre la alfabetización digital del grupo curso, objetivo de la clase y el propósito del ciclo. Exploran de manera guiada los tres recursos seleccionados, opinan, preguntan, responden, otros.</p>
+                    <p>Se organizan en grupos</p>
+                    <p>Análisis del problema a resolver. Elaboración de prompt.</p>
+                    <p>Comparación, reflexión grupal y argumentación grupal.</p>
+                </td>
+                <td>
+                    <p>Los estudiantes se organizan en grupos, reciben, comentan y aclaran dudas de las tareas a realizar como equipos.</p>
+                    <p>Se organizan al interior de cada equipo y comienzan a resolver las tareas.</p>
+                    <p>Elaboran un prompt que les permita resolver el desafio presentado, iteran con el mismo prompt en los tres recursos.</p>
+                    <p>Comparan, analizan y evalúan los resultados. Comparten en plenario conocer el proceso de los otros grupos, reciben y entregan retroalimentación. Rediseñan el prompt con nuevos ajustes, replican el ejercicio para evaluar el proceso y producción de cada recurso. Identifican la fuente de información, veracidad y calidad. Revisan sesgos u otros análisis solicitados por el profesor.</p>
+                </td>
+                <td>
+                    <p>Cada grupo comparte su análisis final.</p>
+                    <p>Concluyen cómo curso, la efectividad de cada plataforma de IAGen en función de su disciplina y el uso más eficiente que lograron identificar.</p>
+                    <p>Concluyen en función de los sesgos, fuentes de información y riesgos identificados.</p>
+                    <p>Evalúan si se cumplió el objetivo de la clase.</p>
+                    <p>Entregan al profesor el trabajo solicitado a mano escrita o por la plataforma de la asignatura.</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     `,
     concepts: [
       'Alfabetización digital en IAGen',
