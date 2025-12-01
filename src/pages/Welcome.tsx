@@ -28,9 +28,9 @@ const Welcome: React.FC = () => {
       ),
     },
     3: {
-      title: 'Asistente IA',
+      title: 'Asistente IA DANIA',
       content:
-        'Genera ideas, prompts y actividades listos para usar; pide reformulaciones o ejemplos y recibe sugerencias de evaluación y retroalimentación para mejorar tus actividades y rúbricas',
+        'Con la ayuda de DANIA genera ideas, prompts y actividades listos para usar; pide reformulaciones o ejemplos y recibe sugerencias de evaluación y retroalimentación para mejorar tus actividades y rúbricas',
       icon: (
         <div className="expanded-icon" style={{ background: 'rgba(16,185,129,0.06)' }}>
           <MessageSquare style={{ width: 22, height: 22, color: 'rgb(16 185 129)' }} />
@@ -54,12 +54,43 @@ const Welcome: React.FC = () => {
       <div className="welcome-page">
         <header className="welcome-header">
           {/* Header placed inside a card to match other cards */}
-          <div className="welcome-card" style={{ padding: '22px' }}>
+          <div className="welcome-card" style={{ 
+            padding: '22px', 
+            position: 'relative'
+          }}>
             <h1>Bienvenido al Portal Docente USS</h1>
-            <p>
-              Este espacio centraliza tus materiales, planificación académica, herramientas de apoyo con IA y gestión
+            <p style={{ maxWidth: '70%' }}>
+              Este espacio centraliza tus materiales, planificación académica, herramientas de apoyo con IA con nuestra IA llamada DANIA que será tu ayuante cuando lo necesites y además está la gestión
               de perfil. Tras iniciar sesión, utiliza el menú lateral para acceder rápidamente a cada módulo.
             </p>
+            
+            {/* Logo DANIA en la esquina superior derecha */}
+            <div style={{ 
+              position: 'absolute',
+              top: '22px',
+              right: '22px',
+              width: '150px', 
+              height: '150px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1))',
+              borderRadius: '20px',
+              padding: '12px',
+              border: '3px solid rgba(99, 102, 241, 0.2)',
+              boxShadow: '0 4px 12px rgba(99, 102, 241, 0.1)'
+            }}>
+              <img 
+                src="/imagenes/Logo_con_nombre.png" 
+                alt="DANIA - Asistente de Alfabetización Digital" 
+                style={{ 
+                  width: '100%', 
+                  height: '100%', 
+                  objectFit: 'contain',
+                  borderRadius: '12px'
+                }}
+              />
+            </div>
           </div>
         </header>
 
@@ -182,8 +213,8 @@ const Welcome: React.FC = () => {
                 <MessageSquare style={{ width: 20, height: 20, color: 'rgb(16 185 129)' }} />
               </div>
               <div>
-                <h3>Asistente IA</h3>
-                <p className="text-sm">Genera ideas y actividades listas para usar: pide una actividad por tema, duración o nivel y recibe pasos, materiales y criterios de evaluación. Puedes pedir adaptaciones (más fácil o más desafiante) y editar lo que el asistente sugiere.</p>
+                <h3>Asistente IA DANIA</h3>
+                <p className="text-sm"> Con la ayuda de DANIA genera ideas y actividades listas para usar: pide una actividad por tema, duración o nivel y recibe pasos, materiales y criterios de evaluación. Puedes pedir adaptaciones (más fácil o más desafiante) y editar lo que el asistente sugiere.</p>
               </div>
             </div>
             

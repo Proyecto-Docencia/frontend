@@ -103,6 +103,28 @@ const MaterialDetail: React.FC = () => {
                       <FileDown className="w-4 h-4" style={{marginRight:4}} /> Descargar PDF
                     </a>
                   )}
+                  <Link to="/planificacion/asistente-ia" className="btn-expanded" style={{ 
+                    backgroundColor: '#fbbf24', 
+                    color: '#1f2937',
+                    fontWeight: '600',
+                    whiteSpace: 'nowrap',
+                    border: 'none',
+                    textDecoration: 'none',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    padding: '0.5rem 1rem',
+                    borderRadius: '0.5rem',
+                    transition: 'all 0.2s',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = '#f59e0b';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = '#fbbf24';
+                  }}
+                  >
+                    Crear Planificación
+                  </Link>
                 </div>
               </div>
               {viewMode === 'video' ? (
